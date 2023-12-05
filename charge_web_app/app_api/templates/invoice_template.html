@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>T-Power</title>
+    <style>
+        /* CSS */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .invoice {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+        }
+        .invoice h1 {
+            text-align: center;
+            color: #333;
+        }
+        .invoice h3 {
+            text-align: center;
+            color: #333;
+        }
+        .invoice p {
+            margin: 10px 0;
+        }
+        .invoice .invoice-details {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .invoice .invoice-details th {
+            background-color: #eee;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .invoice .invoice-details td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    </br>
+    <div class="invoice">
+        <h1><a href="https://evc.t-power.com.au"><img src="http://www.tpterp.com/tplogo.png" height=100 width=250/></a></h1>
+        <h3>ABN:65 651 645 948</h3>
+        </br>
+        </br>
+        <p>Dear {{ user_first_name }},</p>
+        <p>Here is your invoice details:</p>
+        <table class="invoice-details">
+            <tr>
+                <th>Invoice No.</th>
+                <th>Pile No.</th>
+                <th>Capacity (kW)</th>
+                <th>Unit Price (AU$)</th>
+            </tr>
+
+            <tr>
+                <td>{{ invoice_number }}</td>
+                <td>{{ pile_number }}</td>
+                <td>{{ capacity }}</td>
+                <td>{{ unit_price }}/kWh </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="text-align: right;"><strong>Total Amount (Includes GST):</strong></td>
+                <td> ${{ total }} </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

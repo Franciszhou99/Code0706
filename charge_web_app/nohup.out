@@ -1,0 +1,14 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+web.charge_info.start_time: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+
+System check identified 1 issue (0 silenced).
+March 06, 2023 - 22:37:00
+Django version 3.2, using settings 'charge_web.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
