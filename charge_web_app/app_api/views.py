@@ -33,7 +33,7 @@ local_tz = timezone.get_current_timezone()
 class PageNum(PageNumberPagination):
     page_size = 10
 
-# This is for Francis GIT test
+# This is for Francis GIT test in Hotfix Branch
 
 # Twilio SMS Validation
 class SendSMSView(APIView):
